@@ -290,7 +290,7 @@ public class HalfwidthTest {
     }
 
     @Test
-    public void testToFull22_置換対象文字列がnullの時nullを戻り値とし処理を終了するこ() throws Exception {
+    public void testToFull22_置換対象文字列がnullの時nullを戻り値とし処理を終了すること() throws Exception {
         assertThat(Halfwidth.toFull(null), is(nullValue()));
     }
 
