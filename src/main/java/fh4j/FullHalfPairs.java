@@ -19,13 +19,13 @@ import java.util.Set;
 
 public class FullHalfPairs {
 	private final Set<FullHalfPair> pairs;
-	private final ComposablePredicate predicate;
+	private final AppendablePredicate predicate;
 
-	public FullHalfPairs(Set<FullHalfPair> pairs, ComposablePredicate predicate) {
+	public FullHalfPairs(Set<FullHalfPair> pairs, AppendablePredicate predicate) {
 		this.pairs = pairs;
-		this.predicate = predicate != null ? predicate : new ComposablePredicate() {
+		this.predicate = predicate != null ? predicate : new AppendablePredicate() {
 			@Override
-			public boolean isComposable(char c) {
+			public boolean isAppendable(char c) {
 				return c == 'ﾞ' || c == 'ﾟ';
 			}
 		};
@@ -35,11 +35,11 @@ public class FullHalfPairs {
 		return this.pairs;
 	}
 
-	public ComposablePredicate predicate() {
+	public AppendablePredicate predicate() {
 		return this.predicate;
 	}
 
-	public interface ComposablePredicate {
-		boolean isComposable(char c);
+	public interface AppendablePredicate {
+		boolean isAppendable(char c);
 	}
 }

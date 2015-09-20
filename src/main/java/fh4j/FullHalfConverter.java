@@ -20,7 +20,7 @@ import java.util.*;
 public class FullHalfConverter {
 	private final Map<String, FullHalfPair> fullwidthMap;
 	private final Map<String, FullHalfPair> halfwidthMap;
-	private final FullHalfPairs.ComposablePredicate predicate;
+	private final FullHalfPairs.AppendablePredicate predicate;
 
 	public FullHalfConverter(FullHalfPairs pairs) {
 		Set<FullHalfPair> pairSet = pairs.pairs();
@@ -62,7 +62,7 @@ public class FullHalfConverter {
 				buffer.add(s);
 				continue;
 			}
-			if (predicate.isComposable(c)) {
+			if (predicate.isAppendable(c)) {
 				FullHalfPair pair = this.halfwidthMap.get(buffer.peek() + s);
 				if (pair != null) {
 					// 結合文字をStringBuilderに追加してバッファを空にする

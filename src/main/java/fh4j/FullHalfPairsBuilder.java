@@ -20,15 +20,15 @@ import java.util.Set;
 
 public class FullHalfPairsBuilder {
 	private final Set<FullHalfPair> pairs = new LinkedHashSet<FullHalfPair>();
-	private FullHalfPairs.ComposablePredicate predicate;
+	private FullHalfPairs.AppendablePredicate predicate;
 
 	public FullHalfPairsBuilder pair(String fullwidth, String halfwidth) {
 		this.pairs.add(new FullHalfPair(fullwidth, halfwidth));
 		return this;
 	}
 
-	public FullHalfPairsBuilder composablePredicate(
-			FullHalfPairs.ComposablePredicate predicate) {
+	public FullHalfPairsBuilder appendablePredicate(
+			FullHalfPairs.AppendablePredicate predicate) {
 		this.predicate = predicate;
 		return this;
 	}
