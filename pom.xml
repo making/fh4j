@@ -6,7 +6,7 @@
     <name>CodePoints4J</name>
     <groupId>am.ik.fh4j</groupId>
     <artifactId>fh4j</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
