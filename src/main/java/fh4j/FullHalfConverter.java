@@ -52,7 +52,7 @@ public class FullHalfConverter {
 			return halfwidth;
 		}
 		StringBuilder builder = new StringBuilder();
-		Queue<String> buffer = new LinkedList<String>(); // サイズは1のバッファとしてキューを使う
+		Queue<String> buffer = new LinkedList<String>(); // サイズ1のバッファとしてキューを使う
 
 		for (int i = 0; i < halfwidth.length(); i++) {
 			char c = halfwidth.charAt(i);
@@ -63,15 +63,16 @@ public class FullHalfConverter {
 				continue;
 			}
 			if (predicate.isAppendable(c)) {
-				FullHalfPair pair = this.halfwidthMap.get(buffer.peek() + s);
+                String prev = buffer.poll();
+                // バッファの文字と結合した文字が変換可能か
+				FullHalfPair pair = this.halfwidthMap.get(prev + s);
 				if (pair != null) {
-					// 結合文字をStringBuilderに追加してバッファを空にする
+					// 結合文字をStringBuilderに追加
 					builder.append(pair.fullwidth());
-					buffer.clear();
 				}
 				else {
 					// バッファの文字と次の文字をStringBuilderに追加
-					builder.append(fullwidth(buffer.poll()));
+					builder.append(fullwidth(prev));
 					builder.append(fullwidth(s));
 				}
 			}
