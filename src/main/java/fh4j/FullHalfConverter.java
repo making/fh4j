@@ -63,8 +63,8 @@ public class FullHalfConverter {
 				continue;
 			}
 			if (predicate.isAppendable(c)) {
-                String prev = buffer.poll();
-                // バッファの文字と結合した文字が変換可能か
+				String prev = buffer.poll();
+				// バッファの文字と結合した文字が変換可能か
 				FullHalfPair pair = this.halfwidthMap.get(prev + s);
 				if (pair != null) {
 					// 結合文字をStringBuilderに追加
