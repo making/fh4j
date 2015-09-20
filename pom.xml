@@ -20,7 +20,7 @@
         <developerConnection>scm:git:git@github.com:making/fh4j.git</developerConnection>
     </scm>
     <url>https://github.com/making/fh4j</url>
-    <description>Fullwitdh - Halfwith conversion for Java</description>
+    <description>Fullwitdh - Halfwith converter for Java</description>
 
     <developers>
         <developer>
