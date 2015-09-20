@@ -12,7 +12,7 @@ assertThat(DefaultFullHalf.INSTANCE.toHalfwidth("Ｈｅｌｌｏ　Ｗｏｒｌ�
 assertThat(DefaultFullHalf.INSTANCE.toHalfwidth("ハローワールド！"), is("ﾊﾛｰﾜｰﾙﾄﾞ!"));
 ```
 
-Default conversion table is [here](https://github.com/making/fh4j/blob/master/src/main/java/fh4j/DefaultFullHalf.java).
+Default conversion table is [here](src/main/java/fh4j/DefaultFullHalf.java).
 
 ## License
 
