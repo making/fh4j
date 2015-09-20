@@ -14,6 +14,16 @@ assertThat(DefaultFullHalf.INSTANCE.toHalfwidth("ハローワールド！"), is(
 
 Default conversion table is [here](src/main/java/fh4j/DefaultFullHalf.java).
 
+## Maven Dependency
+
+``` xml
+<dependency>
+	<groupId>am.ik.fh4j</groupId>
+	<artifactId>fh4j</artifactId>
+	<version>1.0.0</version>
+</dependency>
+```
+
 ## License
 
 Licensed under the Apache License, Version 2.0.
