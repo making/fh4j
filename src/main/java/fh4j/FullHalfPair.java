@@ -22,6 +22,12 @@ public final class FullHalfPair implements Serializable {
 	private final String halfwidth;
 
 	public FullHalfPair(String fullwidth, String halfwidth) {
+		if (fullwidth == null || fullwidth.length() != 1) {
+			throw new IllegalArgumentException("fullwidth must be 1 length string");
+		}
+		if (halfwidth == null || (halfwidth.length() != 1 && halfwidth.length() != 2)) {
+			throw new IllegalArgumentException("halfwidth must be 1 or 2 length string");
+		}
 		this.fullwidth = fullwidth;
 		this.halfwidth = halfwidth;
 	}
