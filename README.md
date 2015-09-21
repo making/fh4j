@@ -1,6 +1,6 @@
 # FH4J
 
-Fullwitdh - Halfwith converter for Java
+Fullwitdh - Halfwidth converter for Java
 
 [![Build Status](https://travis-ci.org/making/fh4j.svg)](https://travis-ci.org/making/fh4j)
 
