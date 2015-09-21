@@ -117,7 +117,7 @@ public class ToFullwidthTest {
 		assertThat(DefaultFullHalf.INSTANCE.toHalfwidth("｛"), is("{"));
 		assertThat(DefaultFullHalf.INSTANCE.toHalfwidth("｜"), is("|"));
 		assertThat(DefaultFullHalf.INSTANCE.toHalfwidth("｝"), is("}"));
-		assertThat(DefaultFullHalf.INSTANCE.toHalfwidth("￣"), is("~"));
+		assertThat(DefaultFullHalf.INSTANCE.toHalfwidth(String.valueOf('\uff5e')), is("~"));
 		assertThat(DefaultFullHalf.INSTANCE.toHalfwidth("。"), is("｡"));
 		assertThat(DefaultFullHalf.INSTANCE.toHalfwidth("「"), is("｢"));
 		assertThat(DefaultFullHalf.INSTANCE.toHalfwidth("」"), is("｣"));

@@ -112,7 +112,7 @@ public class DefaultFullHalf {
                 .pair("｛", "{")
                 .pair("｜", "|")
                 .pair("｝", "}")
-                .pair("￣", "~")
+                .pair(String.valueOf('\uff5e'), "~")
                 .pair("。", "｡")
                 .pair("「", "｢")
                 .pair("」", "｣")
