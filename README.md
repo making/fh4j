@@ -20,7 +20,7 @@ Default conversion table is [here](src/main/java/fh4j/DefaultFullHalf.java).
 <dependency>
 	<groupId>am.ik.fh4j</groupId>
 	<artifactId>fh4j</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 </dependency>
 ```
 
